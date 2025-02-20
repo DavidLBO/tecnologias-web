@@ -1,4 +1,4 @@
-git # Tecnologias Web
+# Tecnologias Web
 Repositório criado para as aulas teóricas e atividades práticas da disciplina.
 ## Organização do Repositório
 Este repositório está organizado da seguinte forma:
