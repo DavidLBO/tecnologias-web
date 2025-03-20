@@ -9,12 +9,16 @@
       line-height: 1.6;
       background-color: #f4f4f4;
       color: #333;
-      display: flex;
+      /*display: flex;*/
       flex-direction: column;
       justify-content: center;
       height: 100vh;
   }
-  
+
+  main, body {
+    min-height: 100vh;
+    overflow: hidden;
+  }
   header {
       background-color: #4CAF50;
       color: white;
@@ -130,7 +134,7 @@
   
   footer {
       text-align: center;
-      margin-top: 8px;
+      margin-top: auto;
       margin-bottom: 8px;
       font-size: 0.9em;
       color: #666;
