@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tracker</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Tela de Login -->
+        <div id="login-screen" class="screen active">
+            <div class="login-container">
+                <h1>Book Tracker</h1>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit">Entrar</button>
+                    <p id="register-link">Não tem conta? <a href="#">Cadastre-se</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tela de Registro -->
+        <div id="register-screen" class="screen">
+            <div class="register-container">
+                <h1>Criar Conta</h1>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="new-username">Usuário</label>
+                        <input type="text" id="new-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">Senha</label>
+                        <input type="password" id="new-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Senha</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    <button type="submit">Cadastrar</button>
+                    <p id="login-link">Já tem conta? <a href="#">Faça login</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Aplicação Principal (após login) -->
+        <div id="app-screen" class="screen">
+            <header>
+                <h1>Book Tracker</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-screen="add-book">Adicionar Livro</a></li>
+                        <li><a href="#" class="nav-link" data-screen="book-list">Meus Livros</a></li>
+                        <li><a href="#" id="logout-btn">Sair</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <!-- Tela de Adicionar Livro -->
+                <div id="add-book" class="content-section active">
+                    <h2>Adicionar Novo Livro</h2>
+                    <form id="book-form">
+                        <div class="form-group">
+                            <label for="book-title">Título</label>
+                            <input type="text" id="book-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-author">Autor</label>
+                            <input type="text" id="book-author" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-status">Status</label>
+                            <select id="book-status" required>
+                                <option value="want-to-read">Quero Ler</option>
+                                <option value="reading">Lendo</option>
+                                <option value="completed">Concluído</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-rating">Avaliação (1-5)</label>
+                            <input type="number" id="book-rating" min="1" max="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="book-notes">Notas</label>
+                            <textarea id="book-notes" rows="4"></textarea>
+                        </div>
+                        <button type="submit">Adicionar Livro</button>
+                    </form>
+                </div>
+
+                <!-- Tela de Listagem de Livros -->
+                <div id="book-list" class="content-section">
+                    <h2>Meus Livros</h2>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-status="all">Todos</button>
+                        <button class="filter-btn" data-status="want-to-read">Quero Ler</button>
+                        <button class="filter-btn" data-status="reading">Lendo</button>
+                        <button class="filter-btn" data-status="completed">Concluído</button>
+                    </div>
+                    <div id="books-container">
+                        <!-- Livros serão renderizados aqui via JavaScript -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="src/auth.js"></script>
+    <script src="src/bookManager.js"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>
