@@ -2,7 +2,7 @@
 const bookForm = document.getElementById('book-form');
 const booksContainer = document.getElementById('books-container');
 const filterButtons = document.querySelectorAll('.filter-btn');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLink = document.querySelectorAll('.nav-link');
 const contentSections = document.querySelectorAll('.content-section');
 
 // Event Listeners
