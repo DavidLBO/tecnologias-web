@@ -1,0 +1,228 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Estilos para Login e Registro */
+.login-container, .register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1, .register-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#register-link, #login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#register-link a, #login-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Estilos para a Aplicação Principal */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.content-section {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Estilos para Listagem de Livros */
+.filter-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    width: auto;
+    padding: 8px 15px;
+}
+
+.filter-btn.active {
+    background-color: #2c3e50;
+}
+
+.book-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.book-card p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.book-status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.status-want-to-read {
+    background-color: #e67e22;
+}
+
+.status-reading {
+    background-color: #3498db;
+}
+
+.status-completed {
+    background-color: #2ecc71;
+}
+
+.book-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.book-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.change-status-btn {
+    background-color: #9b59b6;
+}
+
+.change-status-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .filter-controls {
+        justify-content: center;
+    }
+}
